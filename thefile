@@ -1,1 +1,13 @@
-demo text
+Name: Nehal Jain
+Age: 17
+Hometown: Kota, Rajasthan
+University: Rishihood University
+Institute: Newton School of Technology (NST)
+Degree: B.Tech in Computer Science & Artificial Intelligence (CS & AI)
+Graduation Year: 2030
+Hobbies: Swimming, Playing Chess
+
+Portfolio Website Files:
+- index.html (Main portfolio page)
+- style.css (Responsive dark/light theme styling)
+- script.js (Interactive typewriter, theme switcher, and navigation)
