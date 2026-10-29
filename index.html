@@ -3,66 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nehal Jain | B.Tech CS & AI Portfolio</title>
-  <meta name="description" content="Portfolio of Nehal Jain - B.Tech in Computer Science & Artificial Intelligence student at Rishihood University (Newton School of Technology), Class of 2030." />
-  
+  <title>Nehal // B.Tech CS & AI (1st Year) - High-Tech Cyber Portfolio</title>
+  <meta name="description" content="High-tech, interactive portfolio of Nehal - 17-year-old 1st Year B.Tech CS & AI student from Kota, Rajasthan at Rishihood University (Newton School of Technology). Driven by coding, chess, swimming, and an insatiable hunger for learning." />
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="dark-theme">
-  <!-- Background Glow Accents -->
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
-  <div class="blob blob-3"></div>
+<body data-theme="cyberpunk">
 
-  <!-- Navigation Bar -->
-  <header class="header" id="header">
-    <div class="nav-container">
-      <a href="#hero" class="brand-logo">
-        <span class="logo-accent">&lt;</span>Nehal<span class="logo-accent">/&gt;</span>
+  <!-- Interactive Neural Constellation Background Canvas -->
+  <canvas id="neural-canvas"></canvas>
+
+  <!-- Cyber Scanline Effect -->
+  <div class="cyber-scanlines"></div>
+
+  <!-- HUD Top Navbar -->
+  <header class="hud-navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="hud-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">NEHAL</span>
+        <span class="logo-bracket">/&gt;</span>
+        <span class="logo-badge">AI.SYS</span>
       </a>
 
-      <nav class="nav-menu" id="nav-menu">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
-          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-          <li class="nav-item"><a href="#hobbies" class="nav-link">Hobbies</a></li>
-          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      <!-- Desktop Nav Links -->
+      <nav class="nav-menu">
+        <ul class="nav-links" id="nav-links-menu">
+          <li><a href="#curiosity" class="nav-item-link">[01 // CURIOSITY]</a></li>
+          <li><a href="#passions" class="nav-item-link">[02 // PASSIONS]</a></li>
+          <li><a href="#arsenal" class="nav-item-link">[03 // ARSENAL]</a></li>
+          <li><a href="#terminal" class="nav-item-link">[04 // TERMINAL]</a></li>
+          <li><a href="#projects" class="nav-item-link">[05 // PROJECTS]</a></li>
+          <li><a href="#contact" class="nav-item-link">[06 // TRANSMIT]</a></li>
         </ul>
       </nav>
 
-      <div class="nav-actions">
-        <!-- Theme Toggle -->
-        <button class="theme-toggle" id="theme-toggle" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
-          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
+      <!-- Nav Controls: Audio Synth & Color Spectrum Picker -->
+      <div class="nav-controls">
+        <!-- Musical Ambient Synth Button -->
+        <button class="audio-controller-btn" id="audio-controller-btn" title="Toggle High-Tech Synthesizer & Music" aria-label="Audio Music Toggle">
+          <div class="eq-visualizer">
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+          </div>
+          <span id="audio-status-text">MUSIC: OFF</span>
         </button>
 
-        <a href="#contact" class="btn btn-sm btn-primary">Let's Connect</a>
+        <!-- Varied Color Spectrum Switcher -->
+        <div class="theme-picker" title="Switch Color Spectrum Palette">
+          <span class="theme-pill pill-cyberpunk" data-theme="cyberpunk" title="Cyberpunk Neon (Magenta / Cyan)"></span>
+          <span class="theme-pill pill-quantum" data-theme="quantum" title="Quantum Azure (Sky / Indigo)"></span>
+          <span class="theme-pill pill-matrix" data-theme="matrix" title="Matrix Emerald (Neon Green / Cyan)"></span>
+          <span class="theme-pill pill-solar" data-theme="solar" title="Solar Flare (Amber / Crimson)"></span>
+        </div>
 
-        <!-- Mobile Hamburger Toggle -->
-        <button class="nav-toggle" id="nav-toggle" aria-label="Open Navigation Menu">
-          <span></span>
-          <span></span>
-          <span></span>
+        <!-- Mobile Menu Toggle Button -->
+        <button class="nav-toggle-btn" id="nav-toggle-btn" aria-label="Toggle Navigation">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
         </button>
       </div>
     </div>
@@ -70,353 +78,275 @@
 
   <main>
     <!-- Hero Section -->
-    <section class="hero-section" id="hero">
-      <div class="container hero-container">
-        <div class="hero-content">
-          <div class="hero-badge">
-            <span class="pulse-dot"></span>
-            <span>Aspiring AI Engineer & Developer</span>
+    <section class="hero-cyber" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-text-side">
+          <div class="hud-telemetry-badge">
+            <span class="live-beacon"></span>
+            <span>SYSTEM ONLINE // NODE: KOTA_RJ // YEAR: 01</span>
           </div>
 
-          <h1 class="hero-title">
-            Hi, I'm <span class="gradient-text">Nehal Jain</span>
+          <div class="hero-greeting">&gt; INITIALIZING PERSONAL DOSSIER...</div>
+          <h1 class="hero-main-title">
+            Hi, I'm <span class="gradient-text-multi glitch-name">Nehal</span>
           </h1>
 
-          <div class="typewriter-box">
-            <span class="typewriter-prefix">I am into </span>
-            <span class="typewriter-text" id="typewriter"></span>
-            <span class="cursor">&nbsp;</span>
+          <div class="typewriter-hud-container">
+            <span class="hud-prefix">&gt;&nbsp;</span>
+            <span class="typewriter-hud-text" id="typewriter-hud"></span>
+            <span class="hud-cursor">_</span>
           </div>
 
-          <p class="hero-description">
-            A 17-year-old tech enthusiast from <strong>Kota, Rajasthan</strong>, currently pursuing 
-            <strong>B.Tech in Computer Science & Artificial Intelligence</strong> at 
-            <strong>Rishihood University</strong> (Newton School of Technology). Driven by a passion 
-            for intelligent systems, problem-solving, and building future-ready software.
+          <p class="hero-summary">
+            A 17-year-old developer from <strong>Kota, Rajasthan</strong>, currently in my <strong>1st year</strong> 
+            of <strong>B.Tech in Computer Science & Artificial Intelligence</strong> at 
+            <strong>Rishihood University (Newton School of Technology)</strong>. Driven by an 
+            <span class="highlight-passion">insatiable hunger for learning new things</span>, relentless curiosity, 
+            and a passion for building intelligent software that pushes boundaries.
           </p>
 
-          <div class="hero-meta-chips">
-            <span class="meta-chip">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              Kota, Rajasthan, India
-            </span>
-            <span class="meta-chip">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-              Class of 2030
-            </span>
-            <span class="meta-chip">
+          <div class="telemetry-chips">
+            <span class="telemetry-chip">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
               Age: 17
             </span>
+            <span class="telemetry-chip">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              1st Year Undergrad (Class of 2030)
+            </span>
+            <span class="telemetry-chip">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              Kota, Rajasthan, India
+            </span>
+            <span class="telemetry-chip">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              Curiosity: Maximum
+            </span>
           </div>
 
-          <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">
-              Get In Touch
+          <div class="hero-cta-group">
+            <a href="#contact" class="cyber-btn btn-cyber-primary">
+              <span>Transmit Signal</span>
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
-            <a href="#projects" class="btn btn-secondary">
-              View Work
+            <a href="#terminal" class="cyber-btn btn-cyber-secondary">
+              <span>Launch Terminal</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
             </a>
-            <a href="#about" class="btn btn-outline">
-              Learn More
-            </a>
-          </div>
-
-          <div class="social-links">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            </a>
-            <a href="mailto:nehaljain@example.com" class="social-link" title="Email Nehal">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <a href="#curiosity" class="cyber-btn btn-cyber-ghost">
+              <span>Explore Mindset</span>
             </a>
           </div>
         </div>
 
-        <div class="hero-visual">
-          <div class="avatar-card">
-            <div class="avatar-frame">
-              <div class="avatar-inner">
-                <span class="avatar-initials">NJ</span>
-              </div>
+        <!-- Hero Right: Holographic 3D Interactive Reactor -->
+        <div class="hero-holo-visual">
+          <div class="holo-card-reactor">
+            <div class="reactor-ring-outer"></div>
+            <div class="reactor-ring-inner"></div>
+
+            <div class="holo-center-orb" id="holo-orb" title="Click for Sound Blast!">
+              <span class="orb-code">AI_CORE_01</span>
+              <span class="orb-monogram">NJ</span>
+              <span class="orb-sub">NEHAL // KOTA</span>
             </div>
-            <div class="floating-badge badge-top">
-              <span class="badge-icon">🤖</span>
-              <span class="badge-text">AI & Machine Learning</span>
+
+            <div class="holo-tag tag-top-right">
+              <span>⚡ CURIOSITY: OVERDRIVE</span>
             </div>
-            <div class="floating-badge badge-bottom">
-              <span class="badge-icon">♟️</span>
-              <span class="badge-text">Strategic Thinker</span>
+            <div class="holo-tag tag-bottom-left">
+              <span>♟️ CHESS &amp; CODE</span>
+            </div>
+            <div class="holo-tag tag-bottom-right">
+              <span>🏊‍♂️ SWIM &amp; FLOW</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Stats Bar -->
-    <section class="stats-section">
-      <div class="container stats-grid">
-        <div class="stat-card">
-          <div class="stat-number">2030</div>
-          <div class="stat-label">Graduation Year</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">CS & AI</div>
-          <div class="stat-label">Specialization</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">17</div>
-          <div class="stat-label">Years Old & Curious</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">Kota → Sonipat</div>
-          <div class="stat-label">Academic Journey</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Me Section -->
-    <section class="section about-section" id="about">
+    <!-- SECTION 1: THE CURIOSITY ENGINE & MINDSET -->
+    <section class="cyber-section" id="curiosity">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">About Me</span>
-          <h2 class="section-title">Driven by Curiosity, Powered by Code</h2>
-          <div class="section-divider"></div>
+        <div class="section-hud-header">
+          <span class="hud-index">[01 // MINDSET &amp; ENGINE]</span>
+          <h2 class="section-hud-title">The Curiosity Reactor</h2>
+          <p class="section-hud-subtitle">
+            An insatiable hunger for learning new things, breaking down mysteries, and building the future.
+          </p>
+          <div class="hud-accent-bar"></div>
         </div>
 
-        <div class="about-grid">
-          <div class="about-text-column">
-            <h3 class="about-subtitle">Hello! I'm Nehal Jain.</h3>
+        <div class="curiosity-grid">
+          <!-- Card 1 -->
+          <div class="cyber-card curiosity-card">
+            <div class="curiosity-badge">🧠</div>
+            <h4>Neural &amp; AI Exploration</h4>
             <p>
-              I am an energetic 17-year-old student from <strong>Kota, Rajasthan</strong>—a city celebrated 
-              across India for its dedication to academic excellence and perseverance. Today, I am taking that 
-              rigorous mindset into the fast-evolving world of <strong>Computer Science and Artificial Intelligence</strong>.
+              Not satisfied with just textbook definitions—eager to understand the mathematical heartbeat of neural networks, gradient descent, and transformer attention mechanisms.
             </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="cyber-card curiosity-card">
+            <div class="curiosity-badge">⚡</div>
+            <h4>Rapid Prototyping</h4>
             <p>
-              Currently studying at <strong>Rishihood University</strong> in collaboration with 
-              <strong>Newton School of Technology</strong>, I am immersed in practical programming, algorithmic 
-              problem solving, and emerging AI technologies. My target is to graduate in <strong>2030</strong> with a deep 
-              understanding of intelligent systems that create real-world impact.
+              Turning curious "what if?" sparks into running scripts. Whether testing an API, building a heuristic search bot, or designing interactive interfaces overnight.
             </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="cyber-card curiosity-card">
+            <div class="curiosity-badge">🔬</div>
+            <h4>First-Principles Thinking</h4>
             <p>
-              Outside the terminal, I believe balance breeds sharp thinking. Whether calculating 5 moves ahead over a 
-              <strong>chessboard</strong> or finding flow and discipline through <strong>swimming laps</strong>, I constantly 
-              nurture patience, focus, and strategic clarity.
+              Grounded in the problem-solving discipline of Kota, Rajasthan. Breaking complex computational bottlenecks down into elementary logic and reconstructing optimal solutions.
             </p>
+          </div>
 
-            <div class="about-key-points">
-              <div class="key-point-item">
-                <div class="point-icon">⚡</div>
-                <div>
-                  <strong>Continuous Learner</strong>
-                  <p>Exploring deep learning concepts, modern programming paradigms, and web architectures.</p>
-                </div>
-              </div>
-              <div class="key-point-item">
-                <div class="point-icon">🎯</div>
-                <div>
-                  <strong>Strategic Mindset</strong>
-                  <p>Applying tactical foresight from chess to algorithmic optimization and software architecture.</p>
-                </div>
-              </div>
+          <!-- Card 4 -->
+          <div class="cyber-card curiosity-card">
+            <div class="curiosity-badge">🔄</div>
+            <h4>Infinite Growth Loop</h4>
+            <p>
+              Constantly devouring technical documentation, research papers, GitHub repositories, and emerging developer tooling. Always in an active state of learning.
+            </p>
+          </div>
+        </div>
+
+        <div class="curiosity-banner">
+          <div class="curiosity-quote">
+            "Curiosity is my primary engine. In a world where AI redefines the horizon every month, the willingness to stay an eternal student is the ultimate superpower."
+            <br />
+            <span>— Nehal, 1st Year B.Tech CS &amp; AI</span>
+          </div>
+          <a href="#terminal" class="cyber-btn btn-cyber-secondary">Interact via CLI</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: TRINITY OF PASSIONS (HOBBIES) -->
+    <section class="cyber-section" id="passions">
+      <div class="container">
+        <div class="section-hud-header">
+          <span class="hud-index">[02 // TRINITY OF PASSIONS]</span>
+          <h2 class="section-hud-title">Code, Chess &amp; Swim</h2>
+          <p class="section-hud-subtitle">
+            Three disciplines that cultivate creativity, tactical foresight, and relentless physical endurance.
+          </p>
+          <div class="hud-accent-bar"></div>
+        </div>
+
+        <div class="passions-grid">
+          <!-- Passion 1: Coding -->
+          <div class="cyber-card passion-card card-coding">
+            <div class="passion-hero-icon">💻</div>
+            <h3 class="passion-title">Coding &amp; Software</h3>
+            <span class="passion-role">THE ARCHITECT // CREATIVE LOGIC</span>
+            <p class="passion-desc">
+              Programming is my canvas. From writing Python scripts and C++ algorithmic structures to crafting high-performance interactive web interfaces, code allows me to bring ideas to life from absolute zero.
+            </p>
+            <div class="passion-tags">
+              <span class="passion-tag">Python</span>
+              <span class="passion-tag">C++ Logic</span>
+              <span class="passion-tag">Web Dev</span>
+              <span class="passion-tag">AI Workflows</span>
             </div>
           </div>
 
-          <div class="about-cards-column">
-            <div class="glass-card info-card">
-              <h4 class="card-heading">Quick Facts</h4>
-              <ul class="info-list">
-                <li><span class="info-label">Full Name:</span> <span class="info-value">Nehal Jain</span></li>
-                <li><span class="info-label">Current Age:</span> <span class="info-value">17 Years</span></li>
-                <li><span class="info-label">Hometown:</span> <span class="info-value">Kota, Rajasthan</span></li>
-                <li><span class="info-label">University:</span> <span class="info-value">Rishihood University</span></li>
-                <li><span class="info-label">Tech Institute:</span> <span class="info-value">Newton School of Technology</span></li>
-                <li><span class="info-label">Degree:</span> <span class="info-value">B.Tech Computer Science & AI</span></li>
-                <li><span class="info-label">Graduation:</span> <span class="info-value">Class of 2030</span></li>
-                <li><span class="info-label">Passions:</span> <span class="info-value">Swimming, Chess, AI</span></li>
-              </ul>
+          <!-- Passion 2: Chess -->
+          <div class="cyber-card passion-card card-chess">
+            <div class="passion-hero-icon">♟️</div>
+            <h3 class="passion-title">Competitive Chess</h3>
+            <span class="passion-role">THE STRATEGIST // TACTICAL CALCULATION</span>
+            <p class="passion-desc">
+              Every move on 64 squares requires calculating tree variations, evaluating positional trade-offs, and staying calm under clock pressure. Chess trains the exact foresight needed to architect resilient software.
+            </p>
+            <div class="passion-tags">
+              <span class="passion-tag">Tree Search</span>
+              <span class="passion-tag">Pattern Recognition</span>
+              <span class="passion-tag">Endgame Composure</span>
+            </div>
+          </div>
+
+          <!-- Passion 3: Swimming -->
+          <div class="cyber-card passion-card card-swimming">
+            <div class="passion-hero-icon">🏊‍♂️</div>
+            <h3 class="passion-title">Swimming</h3>
+            <span class="passion-role">THE FLOW STATE // RELENTLESS ENDURANCE</span>
+            <p class="passion-desc">
+              Gliding through water demands disciplined rhythm, lung stamina, and continuous strokes. Swimming clears mental friction, sharpens focus, and builds the physical grit required for long development marathons.
+            </p>
+            <div class="passion-tags">
+              <span class="passion-tag">Stamina</span>
+              <span class="passion-tag">Mental Reset</span>
+              <span class="passion-tag">Endurance</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Education Section -->
-    <section class="section education-section" id="education">
+    <!-- SECTION 3: TECHNICAL ARSENAL & ACADEMICS -->
+    <section class="cyber-section" id="arsenal">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Education</span>
-          <h2 class="section-title">Academic Journey</h2>
-          <p class="section-description">Building strong foundations in computational thinking and artificial intelligence.</p>
-          <div class="section-divider"></div>
+        <div class="section-hud-header">
+          <span class="hud-index">[03 // TECHNICAL ARSENAL]</span>
+          <h2 class="section-hud-title">Skills &amp; Academics</h2>
+          <p class="section-hud-subtitle">
+            Foundations built during Year 01 of B.Tech in CS &amp; AI.
+          </p>
+          <div class="hud-accent-bar"></div>
         </div>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content glass-card">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-title">B.Tech in Computer Science & Artificial Intelligence (CS & AI)</h3>
-                  <h4 class="timeline-institution">
-                    Rishihood University × Newton School of Technology (NST)
-                  </h4>
-                </div>
-                <span class="timeline-date">2026 – 2030</span>
+        <div class="arsenal-grid">
+          <!-- Arsenal Group 1 -->
+          <div class="cyber-card">
+            <h3 class="arsenal-category-title">
+              <span>⚡</span> Programming &amp; Computer Science
+            </h3>
+            <div class="arsenal-items-grid">
+              <div class="arsenal-item">
+                <span class="arsenal-name">Python 3</span>
+                <span class="arsenal-status">Core Focus // AI Scripting</span>
               </div>
-              <p class="timeline-body">
-                Undergoing rigorous, project-first computer science curriculum designed with industry mentorship. 
-                Focusing on programming fundamentals, data structures, algorithms, discrete mathematics, and applied machine learning.
-              </p>
-              <div class="timeline-tags">
-                <span class="tag">Artificial Intelligence</span>
-                <span class="tag">Machine Learning</span>
-                <span class="tag">Data Structures & Algorithms</span>
-                <span class="tag">Python & C++</span>
-                <span class="tag">Software Engineering</span>
+              <div class="arsenal-item">
+                <span class="arsenal-name">C / C++</span>
+                <span class="arsenal-status">DSA Foundations // Memory</span>
               </div>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content glass-card">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-title">Higher Secondary Schooling & STEM Foundation</h3>
-                  <h4 class="timeline-institution">Kota, Rajasthan</h4>
-                </div>
-                <span class="timeline-date">Completed</span>
+              <div class="arsenal-item">
+                <span class="arsenal-name">HTML5 / Modern CSS</span>
+                <span class="arsenal-status">Responsive &amp; Cyber UI</span>
               </div>
-              <p class="timeline-body">
-                Grounded in mathematics, physics, and computational logic in Kota, developing analytical rigor 
-                and dedication toward technical problem solving.
-              </p>
-              <div class="timeline-tags">
-                <span class="tag">Mathematics</span>
-                <span class="tag">Physics</span>
-                <span class="tag">Analytical Logic</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section skills-section" id="skills">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Expertise</span>
-          <h2 class="section-title">Technical & Analytical Skills</h2>
-          <p class="section-description">Core competencies I am cultivating as an early-career AI engineer.</p>
-          <div class="section-divider"></div>
-        </div>
-
-        <div class="skills-grid">
-          <!-- Card 1: Programming Languages -->
-          <div class="skill-group glass-card">
-            <div class="skill-group-header">
-              <div class="skill-icon">💻</div>
-              <h3>Programming</h3>
-            </div>
-            <div class="skill-items">
-              <div class="skill-chip">
-                <span>Python</span>
-                <span class="skill-level">Intermediate</span>
-              </div>
-              <div class="skill-chip">
-                <span>C / C++</span>
-                <span class="skill-level">Foundations</span>
-              </div>
-              <div class="skill-chip">
-                <span>HTML5 / CSS3</span>
-                <span class="skill-level">Proficient</span>
-              </div>
-              <div class="skill-chip">
-                <span>JavaScript</span>
-                <span class="skill-level">Core Basics</span>
+              <div class="arsenal-item">
+                <span class="arsenal-name">JavaScript &amp; Web Audio</span>
+                <span class="arsenal-status">Synthesizers &amp; Interactivity</span>
               </div>
             </div>
           </div>
 
-          <!-- Card 2: AI & Computer Science -->
-          <div class="skill-group glass-card">
-            <div class="skill-group-header">
-              <div class="skill-icon">🧠</div>
-              <h3>AI & Data Science</h3>
-            </div>
-            <div class="skill-items">
-              <div class="skill-chip">
-                <span>Machine Learning Basics</span>
-                <span class="skill-level">Learning</span>
+          <!-- Arsenal Group 2 -->
+          <div class="cyber-card">
+            <h3 class="arsenal-category-title">
+              <span>🧠</span> AI &amp; Applied Computation
+            </h3>
+            <div class="arsenal-items-grid">
+              <div class="arsenal-item">
+                <span class="arsenal-name">Data Structures &amp; Algo</span>
+                <span class="arsenal-status">Arrays, Trees, Graphs</span>
               </div>
-              <div class="skill-chip">
-                <span>Data Structures & Algo</span>
-                <span class="skill-level">Active</span>
+              <div class="arsenal-item">
+                <span class="arsenal-name">Machine Learning Basics</span>
+                <span class="arsenal-status">Supervised &amp; Neural Concepts</span>
               </div>
-              <div class="skill-chip">
-                <span>NumPy & Pandas</span>
-                <span class="skill-level">Exploring</span>
+              <div class="arsenal-item">
+                <span class="arsenal-name">Git &amp; GitHub</span>
+                <span class="arsenal-status">Version Control &amp; CI/CD</span>
               </div>
-              <div class="skill-chip">
-                <span>Prompt Engineering & LLMs</span>
-                <span class="skill-level">Active</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3: Developer Tools -->
-          <div class="skill-group glass-card">
-            <div class="skill-group-header">
-              <div class="skill-icon">🛠️</div>
-              <h3>Tools & Workflow</h3>
-            </div>
-            <div class="skill-items">
-              <div class="skill-chip">
-                <span>Git & GitHub</span>
-                <span class="skill-level">Version Control</span>
-              </div>
-              <div class="skill-chip">
-                <span>VS Code</span>
-                <span class="skill-level">Daily Driver</span>
-              </div>
-              <div class="skill-chip">
-                <span>Command Line / Bash</span>
-                <span class="skill-level">Comfortable</span>
-              </div>
-              <div class="skill-chip">
-                <span>Jupyter Notebooks</span>
-                <span class="skill-level">Data Workflow</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4: Soft Skills & Mindset -->
-          <div class="skill-group glass-card">
-            <div class="skill-group-header">
-              <div class="skill-icon">✨</div>
-              <h3>Mindset & Strategy</h3>
-            </div>
-            <div class="skill-items">
-              <div class="skill-chip">
-                <span>Tactical Problem Solving</span>
-                <span class="skill-level">Chess-trained</span>
-              </div>
-              <div class="skill-chip">
-                <span>Discipline & Focus</span>
-                <span class="skill-level">Endurance</span>
-              </div>
-              <div class="skill-chip">
-                <span>Curiosity & Adaptability</span>
-                <span class="skill-level">Core trait</span>
-              </div>
-              <div class="skill-chip">
-                <span>Collaboration</span>
-                <span class="skill-level">Team Player</span>
+              <div class="arsenal-item">
+                <span class="arsenal-name">Linux / Terminal CLI</span>
+                <span class="arsenal-status">Bash Shell &amp; Dev Environment</span>
               </div>
             </div>
           </div>
@@ -424,207 +354,195 @@
       </div>
     </section>
 
-    <!-- Hobbies & Interests Section -->
-    <section class="section hobbies-section" id="hobbies">
+    <!-- SECTION 4: INTERACTIVE CYBER TERMINAL -->
+    <section class="cyber-section" id="terminal">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Beyond Coding</span>
-          <h2 class="section-title">Interests & Hobbies</h2>
-          <p class="section-description">How sports and strategy shape my analytical mindset.</p>
-          <div class="section-divider"></div>
+        <div class="section-hud-header">
+          <span class="hud-index">[04 // LIVE INTERACTIVE INTERFACE]</span>
+          <h2 class="section-hud-title">Cyber Command Terminal</h2>
+          <p class="section-hud-subtitle">
+            Query Nehal's system directly. Click quick commands below or type in the interactive prompt.
+          </p>
+          <div class="hud-accent-bar"></div>
         </div>
 
-        <div class="hobbies-grid">
-          <!-- Chess Card -->
-          <div class="hobby-card glass-card">
-            <div class="hobby-icon-banner">
-              <span class="hobby-emoji">♟️</span>
+        <div class="terminal-wrapper">
+          <div class="terminal-header-bar">
+            <div class="terminal-window-buttons">
+              <span class="term-dot red"></span>
+              <span class="term-dot yellow"></span>
+              <span class="term-dot green"></span>
             </div>
-            <div class="hobby-content">
-              <h3 class="hobby-title">Competitive Chess</h3>
-              <p class="hobby-tagline">"Strategy is about making choices, trade-offs; it's about deliberately choosing to be different."</p>
-              <p class="hobby-desc">
-                Chess has taught me that every move has consequences. It sharpens my ability to plan ahead, calculate 
-                complex possibilities, manage pressure, and look for pattern symmetries—qualities that directly feed 
-                into designing intelligent algorithms and debugging software.
-              </p>
-              <div class="hobby-highlights">
-                <span class="hobby-pill">Pattern Recognition</span>
-                <span class="hobby-pill">Patience & Calculation</span>
-                <span class="hobby-pill">Decision Making</span>
-              </div>
-            </div>
+            <div class="terminal-title">guest@nehal-os: ~ (bash / zsh)</div>
+            <div class="mono-tag" style="color: var(--quaternary-accent);">PORT: 8080 [ONLINE]</div>
           </div>
 
-          <!-- Swimming Card -->
-          <div class="hobby-card glass-card">
-            <div class="hobby-icon-banner">
-              <span class="hobby-emoji">🏊‍♂️</span>
-            </div>
-            <div class="hobby-content">
-              <h3 class="hobby-title">Swimming</h3>
-              <p class="hobby-tagline">"Endurance, rhythm, and mental clarity through every stroke."</p>
-              <p class="hobby-desc">
-                Swimming is my ultimate reset button. It fosters physical stamina, mental clarity, and rhythm. 
-                Gliding through the water reinforces steady breathing, consistency, and discipline—the same 
-                grit required to work through tough engineering problems.
-              </p>
-              <div class="hobby-highlights">
-                <span class="hobby-pill">High Endurance</span>
-                <span class="hobby-pill">Mental Clarity</span>
-                <span class="hobby-pill">Discipline</span>
-              </div>
+          <!-- Quick Command Shortcut Pills -->
+          <div class="terminal-quick-pills">
+            <span class="pills-label">EXECUTE PRESET:</span>
+            <button class="cmd-pill" data-cmd="about">about</button>
+            <button class="cmd-pill" data-cmd="curiosity">curiosity</button>
+            <button class="cmd-pill" data-cmd="hobbies">hobbies</button>
+            <button class="cmd-pill" data-cmd="skills">skills</button>
+            <button class="cmd-pill" data-cmd="education">education</button>
+            <button class="cmd-pill" data-cmd="music">music</button>
+            <button class="cmd-pill" data-cmd="theme matrix">theme matrix</button>
+            <button class="cmd-pill" data-cmd="clear">clear</button>
+          </div>
+
+          <div class="terminal-body" id="term-output">
+            <div class="term-line output">===============================================================</div>
+            <div class="term-line output">NEHAL-OS [Version 2.4.0-AI-SYS] (Kota, Rajasthan)</div>
+            <div class="term-line output">Type "help" or click a command pill above to query the system.</div>
+            <div class="term-line output">===============================================================</div>
+          </div>
+
+          <div class="terminal-header-bar" style="border-top: 1px solid var(--border-neon); border-bottom: none; background: #0c0f1d;">
+            <div class="term-input-row" style="width: 100%;">
+              <span class="term-prompt-label">guest@nehal-os:~$</span>
+              <input type="text" id="term-input" class="term-input" placeholder="Type a command (e.g. curiosity, about, hobbies, help)..." autocomplete="off" spellcheck="false" />
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="section projects-section" id="projects">
+    <!-- SECTION 5: PROJECTS & PROTO-LAB -->
+    <section class="cyber-section" id="projects">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Portfolio Work</span>
-          <h2 class="section-title">Featured Projects & Explorations</h2>
-          <p class="section-description">Sample work and academic projects I am currently developing.</p>
-          <div class="section-divider"></div>
+        <div class="section-hud-header">
+          <span class="hud-index">[05 // PROTO-LAB &amp; BUILDS]</span>
+          <h2 class="section-hud-title">Featured Projects</h2>
+          <p class="section-hud-subtitle">
+            Exploring AI models, game heuristics, and interactive web tools.
+          </p>
+          <div class="hud-accent-bar"></div>
         </div>
 
         <div class="projects-grid">
           <!-- Project 1 -->
-          <div class="project-card glass-card">
-            <div class="project-header">
-              <div class="project-folder-icon">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="proj-icon-link" title="Source Code">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </a>
-              </div>
+          <div class="cyber-card project-cyber-card">
+            <div class="project-meta-top">
+              <span class="project-chip">AI &amp; GAME THEORY</span>
+              <span class="mono-tag" style="color: var(--secondary-accent);">Active</span>
             </div>
-            <h3 class="project-title">AI Chess Move Advisor</h3>
-            <p class="project-description">
-              A Python & heuristics-based mini chess analysis helper evaluating optimal tactical decisions and move suggestions using tree search algorithms.
+            <h3 class="project-title">Chess Move Predictor &amp; Analyzer</h3>
+            <p class="project-desc">
+              A Python &amp; heuristics-driven engine that evaluates chess positions, predicts tactical blunders, and computes minimax decision trees.
             </p>
-            <div class="project-tech-tags">
+            <div class="project-footer-tags">
               <span>Python</span>
-              <span>Minimax / Heuristics</span>
-              <span>Algorithms</span>
+              <span>Minimax</span>
+              <span>Chess Heuristics</span>
             </div>
           </div>
 
           <!-- Project 2 -->
-          <div class="project-card glass-card">
-            <div class="project-header">
-              <div class="project-folder-icon">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="proj-icon-link" title="Source Code">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </a>
-              </div>
+          <div class="cyber-card project-cyber-card">
+            <div class="project-meta-top">
+              <span class="project-chip">WEB AUDIO &amp; CYBER UI</span>
+              <span class="mono-tag" style="color: var(--quaternary-accent);">Deployed</span>
             </div>
-            <h3 class="project-title">Modern Developer Portfolio</h3>
-            <p class="project-description">
-              A high-performance, responsive personal website built with modern CSS, dark/light theme toggle, interactive UI elements, and accessible semantics.
+            <h3 class="project-title">Cyber Multi-Color Web Platform</h3>
+            <p class="project-desc">
+              High-performance portfolio engine featuring Web Audio API synthesizers, interactive particle physics, 4 dynamic color spectrums, and live CLI.
             </p>
-            <div class="project-tech-tags">
+            <div class="project-footer-tags">
               <span>HTML5</span>
-              <span>Modern CSS</span>
-              <span>JavaScript</span>
+              <span>CSS Variables</span>
+              <span>Web Audio API</span>
             </div>
           </div>
 
           <!-- Project 3 -->
-          <div class="project-card glass-card">
-            <div class="project-header">
-              <div class="project-folder-icon">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="proj-icon-link" title="Source Code">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </a>
-              </div>
+          <div class="cyber-card project-cyber-card">
+            <div class="project-meta-top">
+              <span class="project-chip">APPLIED LLM &amp; AGENTS</span>
+              <span class="mono-tag" style="color: var(--amber-accent);">Concept / Dev</span>
             </div>
-            <h3 class="project-title">Smart Campus AI Assistant</h3>
-            <p class="project-description">
-              An exploratory conversational interface designed to answer student queries regarding courses, campus facilities, and schedules using LLMs.
+            <h3 class="project-title">Smart Campus Query Companion</h3>
+            <p class="project-desc">
+              An intelligent conversational assistant designed for university students to query academic deadlines, mess menus, and lecture schedules.
             </p>
-            <div class="project-tech-tags">
+            <div class="project-footer-tags">
               <span>Python</span>
-              <span>LLM APIs</span>
               <span>FastAPI</span>
+              <span>LLM APIs</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section contact-section" id="contact">
+    <!-- SECTION 6: TRANSMISSION / CONTACT -->
+    <section class="cyber-section" id="contact">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Get In Touch</span>
-          <h2 class="section-title">Let's Connect & Collaborate</h2>
-          <p class="section-description">I'm always open to discussing technology, AI ideas, chess, or exciting collaborative projects.</p>
-          <div class="section-divider"></div>
+        <div class="section-hud-header">
+          <span class="hud-index">[06 // TRANSMISSION CONSOLE]</span>
+          <h2 class="section-hud-title">Transmit a Signal</h2>
+          <p class="section-hud-subtitle">
+            Open for tech discussions, AI collaborations, chess matches, or interesting ideas.
+          </p>
+          <div class="hud-accent-bar"></div>
         </div>
 
-        <div class="contact-grid">
-          <div class="contact-info-cards">
-            <div class="contact-info-item glass-card">
-              <div class="contact-icon">
+        <div class="contact-console-grid">
+          <div class="contact-channels">
+            <div class="cyber-card channel-card">
+              <div class="channel-icon">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
               </div>
               <div>
-                <h4>Email</h4>
-                <p><a href="mailto:nehaljain@example.com" class="text-link">nehaljain@example.com</a></p>
+                <span class="channel-label">Direct Communication</span>
+                <div><a href="mailto:nehaljain@example.com" class="channel-value">nehaljain@example.com</a></div>
               </div>
             </div>
 
-            <div class="contact-info-item glass-card">
-              <div class="contact-icon">
+            <div class="cyber-card channel-card">
+              <div class="channel-icon">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
               </div>
               <div>
-                <h4>Location</h4>
-                <p>Kota, Rajasthan / Rishihood University Campus, Delhi NCR</p>
+                <span class="channel-label">Geographic Node</span>
+                <div class="channel-value">Kota, Rajasthan / Rishihood Univ (NCR)</div>
               </div>
             </div>
 
-            <div class="contact-info-item glass-card">
-              <div class="contact-icon">
+            <div class="cyber-card channel-card">
+              <div class="channel-icon">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
               </div>
               <div>
-                <h4>Education</h4>
-                <p>B.Tech CS & AI (Graduating 2030)</p>
+                <span class="channel-label">Current Academic Status</span>
+                <div class="channel-value">1st Year Undergrad • B.Tech CS &amp; AI</div>
               </div>
             </div>
           </div>
 
-          <div class="contact-form-wrapper glass-card">
-            <form id="contact-form" class="contact-form">
-              <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="e.g. Alex Sharma" required />
+          <!-- Contact Form -->
+          <div class="cyber-card">
+            <form id="cyber-contact-form" class="console-form">
+              <div class="form-group-cyber">
+                <label for="sender-name">SENDER CALLSIGN / NAME</label>
+                <input type="text" id="sender-name" placeholder="Enter your name..." required />
               </div>
-              <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" placeholder="e.g. alex@example.com" required />
+
+              <div class="form-group-cyber">
+                <label for="sender-email">FREQUENCY / EMAIL</label>
+                <input type="email" id="sender-email" placeholder="name@domain.com" required />
               </div>
-              <div class="form-group">
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" rows="4" placeholder="Hi Nehal, let's connect regarding..." required></textarea>
+
+              <div class="form-group-cyber">
+                <label for="sender-message">TRANSMISSION DATA</label>
+                <textarea id="sender-message" rows="4" placeholder="Hi Nehal, let's connect about..." required></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-block">
-                <span>Send Message</span>
+
+              <button type="submit" class="cyber-btn btn-cyber-primary" style="width: 100%;">
+                <span>Dispatch Signal</span>
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
               </button>
-              <div class="form-feedback" id="form-feedback"></div>
+
+              <div class="transmission-feedback" id="transmission-feedback"></div>
             </form>
           </div>
         </div>
@@ -633,25 +551,29 @@
   </main>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-left">
-        <a href="#hero" class="brand-logo">
-          <span class="logo-accent">&lt;</span>Nehal<span class="logo-accent">/&gt;</span>
+  <footer class="cyber-footer">
+    <div class="container footer-inner">
+      <div class="footer-hud-info">
+        <a href="#hero" class="hud-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">NEHAL</span>
+          <span class="logo-bracket">/&gt;</span>
         </a>
-        <p class="footer-tagline">Nehal Jain • B.Tech CS & AI • Class of 2030</p>
+        <div class="footer-coordinates">
+          GEO: 25.2138° N, 75.8648° E [Kota, Rajasthan] • STATUS: ACTIVE
+        </div>
       </div>
 
-      <div class="footer-links">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#hobbies">Hobbies</a>
-        <a href="#projects">Projects</a>
+      <div class="footer-hud-links">
+        <a href="#curiosity">[CURIOSITY]</a>
+        <a href="#passions">[PASSIONS]</a>
+        <a href="#arsenal">[ARSENAL]</a>
+        <a href="#terminal">[TERMINAL]</a>
+        <a href="#projects">[PROJECTS]</a>
       </div>
 
-      <div class="footer-right">
-        <p>&copy; <span id="current-year">2026</span> Nehal Jain. Built with passion & precision.</p>
+      <div class="mono-tag" style="color: var(--text-dim);">
+        &copy; <span id="cyber-year">2026</span> Nehal • Powered by Curiosity
       </div>
     </div>
   </footer>
@@ -659,4 +581,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
